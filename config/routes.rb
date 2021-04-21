@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root "photos#index"
+  resources :users, only: :show
   devise_for :users
   resources :comments
   resources :follow_requests
